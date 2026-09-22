@@ -102,14 +102,14 @@ export class LeaveRequestsService {
         leaveType: true,
       },
       order: {
-        created_at: 'DESC',
+        created_at: 'ASC',
       },
     });
   }
 
   async getRequestById(id: number) {
     const leaveRequest =
-      await this.leaveRequestRepository.findOne({
+      await this.leaveRequestRepository.findOne({ 
         where: {
           id: id,
         },

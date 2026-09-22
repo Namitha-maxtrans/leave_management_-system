@@ -130,8 +130,9 @@ export class EmployeeService {
         'Employee not found',
       );
     }
-
-    await this.empRepository.delete(employee);
+    await this.LeaveBalanceService.deleteByEmployeeId(id)
+//delete the employee
+    await this.empRepository.delete(id);
 
     return {
       message: 'Employee deleted successfully',

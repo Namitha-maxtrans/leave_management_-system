@@ -9,9 +9,6 @@ import { Repository } from 'typeorm';
 import { LeaveType } from './leave.entity';
 import { Createuserdto } from './craeteuser.dto';
 import { UpdateLeaveDto } from './updateleave.dto';
-
-
-
 @Injectable()
 export class LeaveTypeService {
   constructor(
@@ -110,8 +107,7 @@ export class LeaveTypeService {
         'Leave type not found',
       );
     }
-
-    await this.leaveTypeRepository.delete(leaveType);
+    await this.leaveTypeRepository.delete(id);
 
     return {
       message: 'Leave type deleted successfully',

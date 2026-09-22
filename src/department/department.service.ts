@@ -103,7 +103,7 @@ export class DepartmentService {
   ): Promise<{ message: string }> {
     const department = await this.findOne(id);
 
-    await this.departmentRepository.remove(department);
+    await this.departmentRepository.delete(id);
 
     return {
       message: `Department with ID ${id} deleted successfully`,

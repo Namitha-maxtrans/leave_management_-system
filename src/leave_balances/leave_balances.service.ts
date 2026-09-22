@@ -82,4 +82,15 @@ export class LeaveBalancesService {
       remaining: balance.allocated - balance.used,
     }));
   }
+  //delete leave balance
+  async deleteByEmployeeId(employeeId: number) {
+    await this.leaveBalanceRepository.delete({
+      employee_id: employeeId,
+     
+    });
+
+    return {
+      message: 'Leave balances deleted successfully',
+    };
+  }
 }
