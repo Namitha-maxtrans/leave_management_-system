@@ -39,4 +39,4 @@ Before running the project, make sure you have installed:
 Clone the repository:
 
 
-git clone 
+git clone https://github.com/Namitha-maxtrans/leave_management_-system.git
