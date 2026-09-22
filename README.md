@@ -1,4 +1,4 @@
-# Leave Management System
+## Leave Management System
 
 A Leave Management System built using NestJS, TypeScript, MySQL, and TypeORM.
 
@@ -117,6 +117,6 @@ used = used + days_count
 When an approved leave request is cancelled:
 
 used = used - days_count
-##Validation
+## Validation
 
 The application uses class-validator and class-transformer for request validation.
